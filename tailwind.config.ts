@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        main: "#018FBF",
+      },
+      width: {
+        container: "min(100%, 1440px)",
       },
     },
   },
