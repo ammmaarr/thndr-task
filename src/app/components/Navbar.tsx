@@ -8,7 +8,7 @@ const Navbar: React.FC<{
   return (
     <div className="w-screen bg-main h-fit">
       <div className="grid grid-cols-2 md:grid-cols-3 p-4 md:p-10 w-container mx-auto">
-        <Image src={logo} alt="logo" height={40} />
+        <Image src={logo} alt="logo" height={40} width={140} />
         <input
           type="text"
           name="search"
