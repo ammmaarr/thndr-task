@@ -10,25 +10,17 @@ import { AnimatePresence, easeInOut, motion } from "motion/react";
 const queryClient = new QueryClient();
 
 const Home = () => {
-  const [searchTerm, setSearchTerm] = useState(""); // Actual input value
-  const [debouncedTerm, setDebouncedTerm] = useState(""); // Debounced search term
+  const [searchTerm, setSearchTerm] = useState("");
+  const [debouncedTerm, setDebouncedTerm] = useState("");
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     const handler = setTimeout(() => {
-      setDebouncedTerm(searchTerm); // Update debounced term after delay
-    }, 500); // 500ms debounce delay
+      setDebouncedTerm(searchTerm);
+    }, 500);
 
-    // Cleanup the timeout if the searchTerm changes before the delay ends
     return () => clearTimeout(handler);
   }, [searchTerm]);
-
-  useEffect(() => {
-    if (debouncedTerm) {
-      console.log("Trigger search API call with:", debouncedTerm);
-      // Here you can call your API or trigger a search function
-    }
-  }, [debouncedTerm]);
 
   useEffect(() => {
     const timer = setTimeout(() => {

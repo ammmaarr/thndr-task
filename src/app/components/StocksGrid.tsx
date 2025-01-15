@@ -40,7 +40,6 @@ const StocksGrid: React.FC<{ searchTerm: string }> = ({ searchTerm }) => {
     [isFetchingNextPage, hasNextPage, fetchNextPage]
   );
 
-  // Check if we have no results after the initial load
   if (status === "success" && data?.pages[0]?.results?.length === 0) {
     return <ErrorAlert message={`No stocks found for "${searchTerm}"`} />;
   }

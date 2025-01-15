@@ -3,7 +3,6 @@ import { render, screen } from "@testing-library/react";
 import StocksGrid from "./StocksGrid";
 import useStocks from "../useStocks";
 
-// Mock the useStocks hook
 jest.mock("../useStocks");
 
 describe("StocksGrid", () => {
